@@ -1,0 +1,61 @@
+@import '../../styles/common.scss';
+
+@include desktops{
+  .atoken_header_wrapper{
+    width: 100vw;
+    position: fixed;
+    transition: .3s;
+    height: 100px;
+    min-width: 1024px;
+    z-index: 999;
+    &.default{
+      background-color: transparent;
+    }
+    &.default.scroll,  &.fixed{
+      background-color: #FFF;
+    }
+
+    .atoken_header{
+      min-width: 964px;
+      max-width: 1140px;
+      margin: 0 auto;
+      height: 100px;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      >div.logo{
+        background-image: url('../../assets/common/header_logo_pc@2x.png');
+        width: 144px;
+        height: 42px;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+}
+
+@include mobiles{
+  .atoken_header_wrapper{
+    .atoken_header{
+      width: px2vw(690);
+      height: px2vw(98);
+      padding: 0 px2vw(30);
+      box-shadow:0px 4px 12px 0px rgba(237,237,237,0.5);
+      background-color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      z-index: 999;
+
+      >div.logo{
+        background-image: url('../../assets/common/header_logo_tablets@2x.png');
+        width: px2vw(200);
+        height: px2vw(60);
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

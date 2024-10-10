@@ -1,0 +1,99 @@
+@import "../../styles/common.scss";
+
+@include desktops {
+  .atoken_header_menu {
+    display: flex;
+    align-items: center;
+    > dl.menu_list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      > dd {
+        margin: 0;
+        padding: 0;
+        margin-right: 40px;
+        position: relative;
+        transition: 0.3s;
+        > a {
+          text-decoration: none;
+          font-family: $font_family;
+          font-size: 16px;
+          color: $title_color;
+          transition: 0.3s;
+        }
+
+        &:hover,
+        &.active {
+          > a {
+            color: $primary_color;
+          }
+        }
+
+        > hr.active_line {
+          border: none;
+          position: absolute;
+          width: 20px;
+          height: 3px;
+          left: 50%;
+          margin-left: -10px;
+          margin-top: 12px;
+          background-color: $primary_color;
+        }
+      }
+    }
+  }
+}
+
+@include mobiles {
+  .atoken_mobile_menu {
+    > button.mask_btn {
+      @include initButton;
+      img.menu_icon {
+        width: px2vw(40);
+      }
+    }
+    > div.menu_mask {
+      position: absolute;
+      width: 100vw;
+      height: 0;
+      background-color: #fff;
+      left: 0;
+      top: 0;
+      margin-top: px2vw(100);
+      transition: 0.1s;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      &.active {
+        height: 100vh;
+      }
+
+      > a {
+        text-decoration: none;
+        font-size: px2vw(32);
+        font-family: $font_family;
+        font-weight: 400;
+        color: rgba(43, 46, 51, 1);
+        line-height: px2vw(45);
+        margin-top: px2vw(86);
+        -webkit-tap-highlight-color: transparent;
+        &.active{
+          color: $primary_color;
+        }
+      }
+
+      > button.locale_change_btn {
+        @include initButton;
+        height: px2vw(46);
+        font-size: px2vw(32);
+        font-family: $font_family;
+        font-weight: 400;
+        color: rgba(43, 46, 51, 1);
+        line-height: px2vw(46);
+        color: $title_color;
+        margin-top: px2vw(150);
+      }
+    }
+  }
+}

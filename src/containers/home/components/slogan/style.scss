@@ -1,0 +1,263 @@
+@import '../../../../styles/common';
+$device_width: 1025px;
+
+@mixin flex_row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex_column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin video{
+  .video-container {
+    position: fixed;
+    width: 100vw;
+    //margin-left:-300px;
+    background-color: rgba(#000,0.7);
+    height: 100vh;
+    z-index: 1000;
+    top:0;
+    .close-video {
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      background-image: url('../../../../assets/home/closeVideo.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .video-player {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    .phone-video {
+      width: 300px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform:translate(-50%,-50%);
+    }
+  }
+}
+
+@mixin slogin_content{
+  .left_container{
+    @include flex_column;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    >h1{
+      font-size:50px;
+      font-family:$font_family;
+      font-weight:900;
+      color:rgba(43,46,51,1);
+      line-height:84px;
+      margin-top:144px;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    >p{
+      font-size:20px;
+      font-family:$font_family;
+      font-weight:400;
+      color:rgba(106,114,128,1);
+      line-height:40px;
+      text-align: left;
+      padding:0;
+      margin:0;
+    }
+
+    .downloadBtn_container{
+      margin-top:53px;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      .qrcode{
+        width: 40px;
+        height: 40px;
+        background-image: url('../../../../assets/home/download_qrcode@2x.png');
+        background-color: #FFF;
+        background-size: 70% 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+        margin-top: 5px;
+        cursor: pointer;
+        position: relative;
+        border-radius: 6px;
+        box-shadow:0px 8px 20px 0px rgba(0,0,0,0.08);
+        >img{
+          width: 140px;
+          height: 140px;
+          position: absolute;
+          top:0;
+          margin-top: 70px;
+          right: 0;
+          margin-right: -40px;
+          display: none;
+        }
+        &:hover{
+          >img{
+            display: block;
+          }
+        }
+      }
+
+      // .btn-en {
+      //  background-image: url('../../../../assets/home/showVideoBtnEn.png');
+      // }
+    }
+    .show-video-btn {
+      width: 210px;
+      height: 80px;
+      cursor: pointer;
+      margin-top: 49px;
+      background-image: url('../../../../assets/home/showVideoBtn.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      &.btn-en{
+        background-image: url('../../../../assets/home/showVideoBtnEn.png');
+      }
+    }
+  }
+  .right_container{
+    .slogan_img {
+      width: 350px;
+      height: 700px;
+      margin: 0 auto;
+      margin-top: 99px;
+      background-image: url('../../../../assets/home/main@2x.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.en{
+        background-image: url('../../../../assets/home/main_en@2x.png');
+      }
+    }
+  }
+}
+
+@include desktops{
+  @include video;
+  .slogan_container{
+    width: $device_width;
+    @include flex_row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+    @include slogin_content;
+  }
+}
+
+@include tablets{
+  @include video;
+  .slogan_container{
+    //width: 100%;
+    //padding: 0 0 0 40px;
+    @include flex_row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+    padding-left: 40px;
+    @include slogin_content;
+  }
+}
+
+@include phones {
+  .slogan_phone{
+    padding-top: px2vw(213);
+    h1{
+      text-align: center;
+      margin-bottom: px2vw(10);
+    }
+    p.desc{
+      text-align: center;
+      font-size: px2vw(28);
+      font-family:$font_family;
+      height: px2vw(44);
+      font-weight:400;
+      color:rgba(106,114,128,1);
+      line-height:px2vw(44);
+      margin: 0;
+      padding: 0;
+    }
+
+    .btn_container{
+      @include flex_row;
+      justify-content: space-around;
+      margin: px2vw(57) px2vw(117) px2vw(150) px2vw(117);
+      &.android{
+        margin: px2vw(57) px2vw(90) px2vw(150) px2vw(90);
+      }
+      .btn{
+        height: px2vw(80);
+        border-radius: px2vw(16);
+        .icon {
+          height: px2vw(80);
+        }
+
+        &.ios .icon {
+          width: px2vw(236);
+          background-image: url('../../../../assets/home/appStore_btn@2.png');
+          background-size: 100% 100%;
+        }
+
+        &.ios .icon_extra {
+          width: px2vw(236);
+          height: px2vw(80);
+          background-image: url('../../../../assets/home/appStore_btn2@2.png');
+          background-size: 100% 100%;
+        }
+
+        &.android .icon{
+          width: px2vw(270);
+          background-image: url('../../../../assets/home/googlePlay_btn@2.png');
+          background-size: 100% 100%;
+        }
+        &.android .icon_extra{
+          width: px2vw(270);
+          height: px2vw(80);
+          background-image: url('../../../../assets/home/apkStore_btn@2.png');
+          background-size: 100% 100%;
+        }
+        &.android .icon_extra_en{
+          width: px2vw(270);
+          height: px2vw(80);
+          background-image: url('../../../../assets/home/apkStore_btn_en@2.png');
+          background-size: 100% 100%;
+        }
+
+        &.google .icon{
+          width: px2vw(270);
+          background-image: url('../../../../assets/home/googlePlay_btn@2.png');
+          background-size: 100% 100%;
+        }
+        &.google .icon_extra{
+          width: px2vw(270);
+          height: px2vw(80);
+          background-image: url('../../../../assets/home/apkStore_btn@2.png');
+          background-size: 100% 100%;
+        }
+      }
+    }
+    .slogan_img {
+      width: px2vw(420);
+      height: px2vw(880);
+      margin: 0 auto;
+      background-image: url('../../../../assets/home/main@2x.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.en{
+        background-image: url('../../../../assets/home/main_en@2x.png');
+      }
+    }
+  }
+}

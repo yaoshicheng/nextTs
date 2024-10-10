@@ -1,0 +1,147 @@
+@import '../../../../styles/common';
+
+@mixin flex_row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex_column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@include desktops{
+   .btn_container{
+     padding: 8px;
+     //height: 120px;
+     margin-right: 30px;
+     @include flex_column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     .btn{
+       height: 40px;
+       border-radius:8px;
+       .icon {
+         height: 40px;
+       }
+
+       &.ios .icon {
+         width: 118px;
+         background-image: url('../../../../assets/home/appStore_btn@2.png');
+         background-size: 100% auto;
+       }
+
+       &.ios .icon_extra {
+         width: 118px;
+         height:40px;
+         background-image: url('../../../../assets/home/appStore_btn2@2.png');
+         background-size: 100% auto;
+       }
+
+       &.ios .icon_extra_en{
+         width: 118px;
+         height:40px;
+         background-image: url('../../../../assets/home/appStore_btn2_en@2.png');
+         background-size: 100% auto;
+       }
+
+
+       //&.andriod .icon {
+       //  background-image: url('../../assets/icons/andriod_white@2x.png');
+       //}
+
+       &.google .icon{
+         width: 135px;
+         background-image: url('../../../../assets/home/googlePlay_btn@2.png');
+         background-size: 100% auto;
+       }
+       &.google .icon_extra{
+         width: 135px;
+         height:40px;
+         background-image: url('../../../../assets/home/apkStore_btn@2.png');
+         background-size: 100% auto;
+       }
+       &.google .icon_extra_en{
+         width: 135px;
+         height:40px;
+         background-image: url('../../../../assets/home/apkStore_btn_en@2.png');
+         background-size: 100% auto;
+       }
+     }
+     .btn_invisible{
+       margin-top: 22px;
+       visibility: hidden;
+     }
+   }
+   .btn_container:hover{
+     background:rgba(255,255,255,1);
+     box-shadow:0px 8px 20px 0px rgba(0,0,0,0.08);
+     border-radius:10px;
+     .btn_invisible{
+       margin-top: 22px;
+       visibility: visible;
+     }
+   }
+ }
+
+@include tablets{
+  .btn_container{
+    padding: 8px;
+    //height: 120px;
+    margin-right: 30px;
+    @include flex_column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .btn{
+      height: 40px;
+      border-radius:8px;
+      .icon {
+        height: 40px;
+      }
+
+      &.ios .icon {
+        width: 118px;
+        background-image: url('../../../../assets/home/appStore_btn@2.png');
+        background-size: 100% auto;
+      }
+
+      &.ios .icon_extra {
+        width: 118px;
+        height:40px;
+        background-image: url('../../../../assets/home/appStore_btn2@2.png');
+        background-size: 100% auto;
+      }
+
+      //&.andriod .icon {
+      //  background-image: url('../../assets/icons/andriod_white@2x.png');
+      //}
+
+      &.google .icon{
+        width: 135px;
+        background-image: url('../../../../assets/home/googlePlay_btn@2.png');
+        background-size: 100% auto;
+      }
+      &.google .icon_extra{
+        width: 135px;
+        height:40px;
+        background-image: url('../../../../assets/home/apkStore_btn@2.png');
+        background-size: 100% auto;
+      }
+    }
+    .btn_invisible{
+      margin-top: 22px;
+      visibility: hidden;
+    }
+  }
+  .btn_container:hover{
+    background:rgba(255,255,255,1);
+    box-shadow:0px 8px 20px 0px rgba(0,0,0,0.08);
+    border-radius:10px;
+    .btn_invisible{
+      margin-top: 22px;
+      visibility: visible;
+    }
+  }
+}

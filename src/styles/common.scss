@@ -1,0 +1,50 @@
+@import "./variables.scss";
+@import './init.scss';
+
+
+
+
+
+// Define the responsive media query
+@mixin desktops {
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin phones {
+  // Small devices (landscape phones, 576px and up)
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobiles{
+  @media (max-width: 1024px){
+    @content;
+  }
+}
+
+@function px2vw($px, $design_screen_width: 750) {
+  @return $px / ($design_screen_width/100) * 1vw;
+}
+
+@function px2vh($px, $design_screen_width: 750) {
+  @return $px / ($design_screen_width/100) * 1vh;
+}
+
+@function px2rem($px, $html_font_size: 16) {
+  @return $px / $html_font_size * 1rem;
+}
+
+@function toVW($px, $design_screen_width: 750) {
+  @return px2vw($px * 2, $design_screen_width);
+}

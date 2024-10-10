@@ -1,0 +1,59 @@
+@import '../../../../styles/common.scss';
+
+@include phones{
+  .feature_list{
+    >.feature{
+      padding-top: px2vw(20);
+      padding-bottom: px2vw(80);
+    }
+    // >.feature:first-child{
+    //   margin-top: 0;
+    // }
+    >.feature:last-child{
+      margin-bottom: px2vw(80);
+    }
+  }
+}
+
+@include tablets{
+  .feature_list{
+    overflow: hidden;
+    >.feature{
+      margin-top: px2vw(80,1366);
+    }
+    >.feature:first-child{
+      margin-top: 0;
+    }
+    >.feature:last-child{
+      margin-bottom: px2vw(92,1366);
+    }
+  }
+}
+
+@include desktops{
+  .feature_list{
+    position: relative;
+    .right_bg{
+      position: absolute;
+      z-index: -1;
+      width: 806px;
+      height: 1234px;
+      right: 0;
+      top: 0;
+      margin-top: 80px;
+      //background-image: url('../../../../assets/home/right_tri_bg@2x.png');
+      background-size: auto 80%;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+    >.feature{
+      margin-bottom: 200px;
+    }
+    >.feature:first-child{
+      margin-top: 0;
+    }
+    >.feature:last-child{
+      margin-bottom: 200px;
+    }
+  }
+}

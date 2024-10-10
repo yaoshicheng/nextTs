@@ -1,0 +1,248 @@
+@import '../../../../styles/common.scss';
+$device_width: 1025px;
+
+.cooperation>.logos_content>.logoItem {
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+
+  &.dfg {
+    background-image: url('../../../../assets/home/DFG.png');
+  }
+
+  &.etc{
+    background-image: url('../../../../assets/home/etc.png');
+  }
+  &.eth{
+    background-image: url('../../../../assets/home/eth.png');
+  }
+
+  &.dog{
+    background-image: url('../../../../assets/home/dog.png');
+  }
+
+  &.bkb{
+    background-image: url('../../../../assets/home/bkb.png');
+  }
+
+  &.node{
+    background-image: url('../../../../assets/home/node.png');
+  }
+  &.cosmos{
+    background-image: url('../../../../assets/home/cosmos.png');
+  }
+  &.polkadot{
+    background-image: url('../../../../assets/home/polkadot.png');
+  }
+  &.ont{
+    background-image: url('../../../../assets/home/ont.png');
+  }
+  &.qtum{
+    background-image: url('../../../../assets/home/qtum.png');
+  }
+}
+
+
+@include desktops {
+  .cooperation_wrap{
+    width: $device_width;
+    min-width: $device_width;
+    position: relative;
+    margin-bottom: 150px;
+    margin-top: 50px;
+    .circle_bg{
+      width: 227px;
+      height: 358px;
+      //background-image: url('../../assets/bg/../../assets/bg/circle_bg@2x.png');
+      background-size: auto 100%;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 245px;
+      z-index: -1;
+    }
+  }
+  .cooperation {
+    width: $device_width;
+    margin: 0 auto;
+
+    // border: 1px solid blue;
+
+
+
+
+
+    >.title {
+      width: 275px;
+      height: 71px;
+      background-image: url('../../../../assets/home/PARTNERS@2x.png');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      >h1 {
+        margin: 0;
+        font-size: 30px;
+        font-family: $font_family;
+        font-weight: 600;
+        color: $font_color;
+      }
+    }
+
+    >.split_line {
+      width: 36px;
+      height: 2px;
+      background-color: $title_color;
+      margin: 0 auto;
+      margin-top: 22px;
+      margin-bottom: 40px;
+    }
+
+    >.logos_content {
+      // border: 1px solid greenyellow;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      >.logoItem {
+        cursor: pointer;
+        width: 180px;
+        height: 50px;
+        margin-bottom: 20px;
+        background-size: 65% auto;
+        background-position: center;
+        border: 1px solid transparent;
+        transition: border .5s;
+        &:hover{
+          border: 1px solid $primary_color;
+        }
+      }
+    }
+  }
+}
+
+@include tablets{
+  .cooperation {
+    width: 100vw;
+    margin: 0 auto;
+    margin-top: px2vw(112,1366);
+    // border: 1px solid blue;
+    margin-bottom: px2vw(122,1366);
+
+    >.title {
+      width: px2vw(335,1366);
+      height: px2vw(84,1366);
+      background-image: url('../../../../assets/home/PARTNERS@2x.png');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      >h1 {
+        margin: 0;
+        font-size: px2vw(36,1366);
+        font-family: $font_family;
+        font-weight: 600;
+        color: $title_color;
+      }
+    }
+
+    >.split_line {
+      width: px2vw(60,1366);
+      height: px2vw(3,1366);
+      background-color: $title_color;
+      margin: 0 auto;
+      margin-top: px2vw(22,1366);
+      margin-bottom: px2vw(30,1366);
+    }
+
+    >.logos_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 px2vw(40,1366);
+
+      >.logoItem {
+        width: px2vw(224,1366);
+        height: px2vw(94,1366);
+        border: 1px solid transparent;
+        margin-bottom: px2vw(20,1366);
+        background-size: 65%;
+      }
+    }
+  }
+}
+
+@include phones {
+  .cooperation {
+    width: 100vw;
+    overflow: hidden;
+    margin-bottom: px2vw(80);
+
+    >.title {
+      width: px2vw(336);
+      height: px2vw(84);
+      background-image: url('../../../../assets/home/PARTNERS@2x.png');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      >h1 {
+        margin: 0;
+        font-size: px2vw(36);
+        font-family: $font_family;
+        font-weight: 600;
+        color: $font_color;
+      }
+    }
+
+    >.split_line {
+      width: px2vw(60);
+      height: px2vw(4);
+      background-color: $title_color;
+      margin: 0 auto;
+      margin-top: px2vw(20);
+      margin-bottom: px2vw(40);
+    }
+
+    >.logos_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 px2vw(36);
+
+      >.logoItem {
+        width: px2vw(324);
+        height: px2vw(122);
+        border: 1px solid transparent;
+        background-size: 50% auto;
+        margin-bottom: px2vw(20);
+
+        &.dfg {
+          background-image: url('../../../../assets/home/DFG.png');
+        }
+
+        &.etc{
+          background-image: url('../../../../assets/home/etc.png');
+        }
+
+        &.nblc {
+          background-image: url('../../../../assets/home/nblc_logo@2x.png');
+        }
+      }
+    }
+  }
+}

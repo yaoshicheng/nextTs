@@ -1,0 +1,52 @@
+@import '../../styles/common.scss';
+
+@include phones {
+  .wechat_mask {
+    position: absolute;
+    width: 100vw !important;
+    height: 100vh !important ;
+    overflow: hidden !important;
+    margin: 0 !important;
+    top: 0 !important;
+    max-width: 100vw !important;
+    background: rgba(0,0,0,0.8);
+    text-align: right;
+    img{
+      width:50%;
+    }
+    h3{
+      color: #FFF;
+      margin-right: px2vw(20);
+    }
+
+
+    .ant-modal-content {
+      width: 100vw !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+
+      .ant-modal-close {
+        display: none !important;
+      }
+
+      .ant-modal-body {
+        box-shadow: none !important;
+        text-align: right;
+
+        h3 {
+          text-align: center;
+          margin-top: px2vw(20);
+        }
+      }
+    }
+  }
+  .invisible{
+    display: none;
+  }
+  .visible{
+    display: inline-block;
+  }
+}

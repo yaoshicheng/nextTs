@@ -1,0 +1,235 @@
+@import "../../styles/common.scss";
+
+@include desktops {
+  .wallet_container {
+    overflow: hidden;
+    > div.coin_introduce_wrapper,
+    > div.chain_introduce_wrapper,
+    > div.wallet_introduce_wrapper {
+      width: 100vw;
+      min-width: 1024px;
+      transition: 0.3s;
+    }
+
+    > div.coin_introduce_wrapper {
+      margin-top: 100px;
+      height: 1080px;
+      background: linear-gradient(180deg, rgba(250, 250, 250, 1) 0%, rgba(235, 240, 245, 1) 100%);
+      > div.coin_introduce_bg {
+        width: 100vw;
+        min-width: 1024px;
+        transition: 0.3s;
+        background-image: url("../../assets/wallet/coin_introduce_bg.png");
+        background-size: auto 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        > div.coin_introduce {
+          max-width: 1200px;
+          min-width: 1024px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          transition: 0.3s;
+          > h1 {
+            font-size: 48px;
+            font-family: $font_family;
+            color: rgba(0, 0, 0, 1);
+            line-height: 56px;
+            margin: 0;
+            margin-top: 100px;
+            margin-bottom: 30px;
+          }
+          > p {
+            margin: 0;
+            font-size: 24px;
+            font-family: $font_family;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+            line-height: 40px;
+          }
+          > img {
+            width: 728px;
+            margin-top: 60px;
+          }
+        }
+      }
+    }
+
+    > div.chain_introduce_wrapper {
+      height: 800px;
+      background-color: #fff;
+      background-image: url("../../assets/wallet/chain_introduce_bg.png");
+      background-size: auto 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      > div.chain_introduce {
+        max-width: 1200px;
+        min-width: 1024px;
+        height: 800px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > div.desc {
+          margin-left: 30px;
+          > h1 {
+            margin: 0;
+            margin-bottom: 26px;
+            width: 374px;
+            font-size: 48px;
+            font-family: $font_family;
+            color: rgba(0, 0, 0, 1);
+          }
+
+          > p {
+            margin: 0;
+            font-size: 24px;
+            font-family: $font_family;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+            line-height: 40px;
+          }
+        }
+
+        > img.chain_introduce_img {
+          margin-right: 30px;
+          max-width: 730px;
+          height: 566px;
+          min-width: 700px;
+          display: block;
+        }
+      }
+    }
+
+    > div.wallet_introduce_wrapper {
+      background: linear-gradient(180deg, rgba(250, 250, 250, 1) 0%, rgba(235, 240, 245, 1) 100%);
+      > div.wallet_introduce {
+        min-width: 1024px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        > h1 {
+          font-size: 48px;
+          font-family: $font_family;
+          color: rgba(0, 0, 0, 1);
+          line-height: 56px;
+          margin: 0;
+          margin-top: 80px;
+          margin-bottom: 30px;
+        }
+        > p {
+          margin: 0;
+          font-size: 24px;
+          font-family: $font_family;
+          font-weight: 400;
+          color: rgba(102, 102, 102, 1);
+          line-height: 40px;
+        }
+
+        > img.wallet_introduce_img {
+          display: block;
+          width: 850px;
+          height: 445px;
+          margin-top: 40px;
+          margin-bottom: 80px;
+        }
+      }
+    }
+  }
+}
+
+@include mobiles {
+  .wallet_container {
+    width: 100vw;
+    overflow: hidden;
+
+    div.coin_introduce,
+    div.chain_introduce,
+    div.wallet_introduce {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    div.coin_introduce{
+      margin-top: px2vw(100);
+    }
+
+    div.chain_introduce {
+      > div.desc {
+        margin-top: px2vw(100);
+        > h1 {
+          margin: 0;
+          // margin-top: px2vw(100);
+          text-align: center;
+          font-size: px2vw(48);
+          font-family: $font_family;
+          color: rgba(0, 0, 0, 1);
+          line-height: px2vw(56);
+          &.all_token_title{
+            margin-bottom: px2vw(30);
+          }
+        }
+        > p {
+          text-align: center;
+          font-size: px2vw(24);
+          font-family: $font_family;
+          font-weight: 400;
+          color: rgba(102, 102, 102, 1);
+          // line-height: px2vw(40);
+        }
+      }
+
+      > img.chain_introduce_img{
+        display: block;
+        width: px2vw(584);
+        height: px2vw(454);
+        margin-top: px2vw(94);
+        margin-bottom: px2vw(94);
+      }
+    }
+
+    div.coin_introduce,
+    div.wallet_introduce {
+      // margin-top: px2vw(100);
+      background: linear-gradient(180deg, rgba(250, 250, 250, 1) 0%, rgba(235, 240, 245, 1) 100%);
+      > h1 {
+        margin-top: px2vw(100);
+        margin-bottom: px2vw(30);
+        font-size: px2vw(48);
+        font-family: $font_family;
+        color: rgba(0, 0, 0, 1);
+      }
+      > p {
+        margin: 0;
+        font-size: px2vw(24);
+        font-family: $font_family;
+        font-weight: 400;
+        color: rgba(102, 102, 102, 1);
+        line-height: px2vw(40);
+      }
+      > img.coin_introduce_img {
+        display: block;
+        width: px2vw(564);
+        height: px2vw(564);
+        margin-bottom: px2vw(66);
+      }
+      > img.wallet_introduce_img {
+        width: px2vw(688);
+        height: px2vw(356);
+        display: block;
+        margin-top: px2vw(104);
+        margin-bottom: px2vw(104);
+      }
+    }
+  }
+}

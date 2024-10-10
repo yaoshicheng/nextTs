@@ -1,0 +1,10 @@
+// init some native button style
+@mixin initButton {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+  border-radius: none;
+  box-shadow: none;
+}

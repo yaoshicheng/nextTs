@@ -1,0 +1,26 @@
+@import '../../styles/common.scss';
+
+
+@include desktops{
+  div.main_page{
+    cursor: pointer;
+    background-image: url('../../assets/home/full_bg.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .slogan_box{
+      display: flex;
+    }
+  }
+}
+
+@include phones{
+  div.main_page{
+    background:rgba(250,251,252,1);
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../styles/common.scss';
+$device_width: 1025px;
+
+@include desktops{
+  div.about_page{
+    cursor: pointer;
+    //background-image: url('../../assets/home/full_bg.png');
+    //background-size: 100% auto;
+    //background-repeat: no-repeat;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 160px 40px 0 40px;
+    .detail_container{
+      min-width:964px;
+      max-width: 1140px;
+      >.title{
+        font-size:48px;
+        font-family:$font_family;
+        color:rgba(43,46,51,1);
+        line-height:56px;
+        letter-spacing:1px;
+        -webkit-text-stroke:2px rgba(43,46,51,1);
+        text-align: left;
+      }
+      >.detail{
+        font-size:18px;
+        font-family:$font_family;
+        font-weight:500;
+        color:rgba(47,47,51,1);
+        line-height:36px;
+      }
+    }
+  }
+}
+
+@include tablets{
+  div.about_page{
+    cursor: pointer;
+    //background-image: url('../../assets/home/full_bg.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 40px 0 40px;
+    .detail_container{
+      >.title{
+        font-size:48px;
+        font-family:$font_family;
+        color:rgba(43,46,51,1);
+        line-height:56px;
+        letter-spacing:1px;
+        -webkit-text-stroke:2px rgba(43,46,51,1);
+        text-align: left;
+      }
+      >.detail{
+        font-size:18px;
+        font-family:$font_family;
+        font-weight:500;
+        color:rgba(47,47,51,1);
+        line-height:36px;
+      }
+    }
+  }
+}
+
+@include phones {
+  div.about_page {
+    cursor: pointer;
+    //background: url('../../assets/home/full_bg.png');
+    background: rgba(255, 255, 255, 1);
+    background-size: 100% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: px2vw(150) px2vw(40) 0 px2vw(40);
+
+    .detail_container {
+      > .title {
+        font-size: px2vw(48);
+        font-family: $font_family;
+        color: rgba(43, 46, 51, 1);
+        line-height: px2vw(56);
+        letter-spacing: 1px;
+        -webkit-text-stroke: 2px rgba(43, 46, 51, 1);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-bottom: px2vw(27);
+      }
+
+      > .detail {
+        font-size:px2vw(24);
+        font-family:$font_family;
+        font-weight:500;
+        color:rgba(47,47,51,1);
+        line-height:px2vw(48);
+      }
+    }
+  }
+}
