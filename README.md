@@ -1,6 +1,6 @@
 # AToken_WebSite_Official
 
-> 新时代的开始，往往由一个旧时代的陨落作为序幕。Based on Next.js, created by ChrisWen.
+> 新时代的开始，往往由一个旧时代的陨落作为序幕。Based on Next.js.
 
 ## Feature
 1. 采用`TypeScript`及`Next`进行重构，静态语言类型赋予其高维护及高可读性；
