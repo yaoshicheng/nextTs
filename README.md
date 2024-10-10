@@ -1,5 +1,3 @@
-# AToken_WebSite_Official
-
 > 新时代的开始，往往由一个旧时代的陨落作为序幕。Based on Next.js.
 
 ## Feature
