@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && next -p 3030",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && next build",
-    "build:tn_testing": "set NODE_OPTIONS=--openssl-legacy-provider && next build",
+    "start": "next -p 3030",
+    "build": "next build",
+    "build:tn_testing": "&& next build",
     "export": "next export",
-    "deploy": "set NODE_OPTIONS=--openssl-legacy-provider && next start -p 9091",
+    "deploy": "next start -p 9091",
     "deploy:tn_testing": "next start -p 80",
     "lint": "eslint --fix --ext .tsx --ext .ts src/ pages/"
   },
@@ -47,7 +47,6 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "eslint-plugin-unicorn": "^14.0.1",
     "husky": "^3.1.0",
-    "node-sass": "^4.13.0",
     "typescript": "^3.7.2"
   },
   "dependencies": {
@@ -63,6 +62,7 @@
     "lodash.throttle": "^4.1.1",
     "next": "^9.1.4",
     "next-images": "^1.2.0",
+    "node-sass": "5.0.0",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
